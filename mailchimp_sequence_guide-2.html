@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mailchimp Email Sequences — Elements Medical Spa</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #FAF8F4;
+    --white: #FFFFFF;
+    --ink: #1C1917;
+    --ink-mid: #44403C;
+    --ink-light: #78716C;
+    --rule: #E7E5E0;
+    --accent: #B5451B;
+    --accent-light: #FBF0EC;
+    --accent-mid: #E8693E;
+    --teal: #0F6E56;
+    --teal-light: #E1F5EE;
+    --amber: #854F0B;
+    --amber-light: #FAEEDA;
+    --purple: #534AB7;
+    --purple-light: #EEEDFE;
+    --step-bg: #F5F3EF;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* HEADER */
+  header {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 40px 60px 36px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .brand {
+    font-family: 'DM Serif Display', serif;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-mid);
+    margin-bottom: 8px;
+  }
+  header h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #FAF8F4;
+    max-width: 500px;
+  }
+  .header-meta {
+    text-align: right;
+    font-size: 12px;
+    color: #A8A29E;
+    line-height: 1.8;
+    flex-shrink: 0;
+  }
+
+  /* INTRO */
+  .intro {
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    padding: 20px 60px;
+    font-size: 14px;
+    color: var(--ink-mid);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* MAIN */
+  main { max-width: 880px; margin: 0 auto; padding: 48px 40px 80px; }
+
+  /* PART DIVIDERS */
+  .part-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--ink);
+  }
+  .part-number {
+    background: var(--ink);
+    color: var(--cream);
+    font-family: 'DM Serif Display', serif;
+    font-size: 13px;
+    padding: 5px 14px;
+    border-radius: 4px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    flex-shrink: 0;
+  }
+  .part-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--ink);
+  }
+
+  .part-block { margin-bottom: 64px; }
+
+  /* SECTION HEADINGS */
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .section-desc {
+    font-size: 14px;
+    color: var(--ink-light);
+    margin-bottom: 28px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  /* STEPS */
+  .steps {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--white);
+    margin-bottom: 28px;
+  }
+  .step {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    border-bottom: 1px solid var(--rule);
+  }
+  .step:last-child { border-bottom: none; }
+  .step-num {
+    background: var(--step-bg);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 18px;
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    color: var(--ink-light);
+    border-right: 1px solid var(--rule);
+    min-height: 64px;
+  }
+  .step-body { padding: 16px 22px; }
+  .step-action {
+    font-weight: 500;
+    color: var(--ink);
+    font-size: 14.5px;
+    margin-bottom: 4px;
+  }
+  .step-detail {
+    font-size: 13.5px;
+    color: var(--ink-mid);
+    line-height: 1.65;
+  }
+  .step-detail code {
+    background: var(--step-bg);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 1px 7px;
+    font-family: 'SF Mono', 'Fira Code', monospace;
+    font-size: 12.5px;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+  .step-sub {
+    margin-top: 8px;
+    padding-left: 12px;
+    border-left: 2px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: 13px;
+    color: var(--ink-mid);
+  }
+  .step-sub span::before { content: "→ "; color: var(--ink-light); }
+
+  /* TIP / WARN / NOTE */
+  .tip {
+    margin-top: 10px;
+    background: var(--teal-light);
+    border-left: 3px solid var(--teal);
+    border-radius: 0 6px 6px 0;
+    padding: 10px 14px;
+    font-size: 13px;
+    color: #0F4A3A;
+  }
+  .warn {
+    margin-top: 10px;
+    background: var(--amber-light);
+    border-left: 3px solid var(--amber);
+    border-radius: 0 6px 6px 0;
+    padding: 10px 14px;
+    font-size: 13px;
+    color: var(--amber);
+  }
+  .note {
+    margin-top: 10px;
+    background: var(--purple-light);
+    border-left: 3px solid var(--purple);
+    border-radius: 0 6px 6px 0;
+    padding: 10px 14px;
+    font-size: 13px;
+    color: var(--purple);
+  }
+
+  /* TREATMENT SEQUENCE CARDS */
+  .treatment-block { margin-bottom: 52px; }
+  .treatment-title-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  .treatment-badge {
+    background: var(--ink);
+    color: var(--cream);
+    font-family: 'DM Serif Display', serif;
+    font-size: 14px;
+    padding: 6px 16px;
+    border-radius: 4px;
+  }
+  .treatment-interval {
+    font-size: 13px;
+    color: var(--ink-light);
+  }
+  .treatment-interval strong { color: var(--ink); font-weight: 500; }
+
+  /* EMAIL SEQUENCE TIMELINE */
+  .sequence-timeline {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .seq-header {
+    background: var(--step-bg);
+    padding: 12px 20px;
+    font-size: 11.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--ink-light);
+    border-bottom: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 130px 1fr 200px;
+    gap: 16px;
+  }
+  .seq-row {
+    display: grid;
+    grid-template-columns: 130px 1fr 200px;
+    gap: 16px;
+    padding: 13px 20px;
+    border-bottom: 1px solid var(--rule);
+    font-size: 13.5px;
+    align-items: start;
+  }
+  .seq-row:last-child { border-bottom: none; }
+  .seq-timing {
+    font-weight: 500;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .seq-purpose { color: var(--ink-mid); }
+  .seq-subject {
+    font-size: 12.5px;
+    color: var(--ink-light);
+    font-style: italic;
+  }
+
+  /* OVERVIEW TABLE */
+  .overview {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 48px;
+  }
+  .overview-header {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 14px 24px;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  thead th {
+    background: var(--step-bg);
+    padding: 10px 20px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 11.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    border-bottom: 1px solid var(--rule);
+  }
+  tbody tr { border-bottom: 1px solid var(--rule); }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: #FDFCFA; }
+  td { padding: 11px 20px; vertical-align: top; color: var(--ink-mid); }
+  td:first-child { font-weight: 500; color: var(--ink); white-space: nowrap; }
+
+  /* INFO BOX */
+  .info-box {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 22px 28px;
+    margin-bottom: 36px;
+    font-size: 13.5px;
+    color: var(--ink-mid);
+    line-height: 1.7;
+  }
+  .info-box h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+  .info-box ul {
+    padding-left: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  /* TEMPLATE FRAMEWORK */
+  .template-box {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 28px;
+  }
+  .template-box-header {
+    background: var(--purple-light);
+    border-bottom: 1px solid #CECBF6;
+    padding: 12px 20px;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--purple);
+  }
+  .template-row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    border-bottom: 1px solid var(--rule);
+    font-size: 13.5px;
+  }
+  .template-row:last-child { border-bottom: none; }
+  .template-label {
+    padding: 12px 16px;
+    font-weight: 500;
+    color: var(--ink);
+    background: var(--step-bg);
+    border-right: 1px solid var(--rule);
+    font-size: 13px;
+  }
+  .template-value {
+    padding: 12px 16px;
+    color: var(--ink-mid);
+  }
+  .template-value em { color: var(--ink-light); font-style: italic; font-size: 12.5px; }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink);
+    color: #A8A29E;
+    text-align: center;
+    padding: 28px 40px;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+  footer strong { color: var(--cream); }
+
+  @media print {
+    body { background: white; }
+    header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .steps, .treatment-block, .sequence-timeline { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="brand">Elements Medical Spa · Windsor, ON</div>
+    <h1>Mailchimp Email Sequences — Setup &amp; Management Guide</h1>
+  </div>
+  <div class="header-meta">
+    For: Front desk &amp; admin staff<br>
+    Tool: Mailchimp (free or Essentials plan)<br>
+    Updated: April 2026
+  </div>
+</header>
+
+<div class="intro">
+  <span>This guide has two parts. <strong>Part 1</strong> walks you through the one-time setup of Mailchimp — connecting it to Jane, creating your audience segments, and turning on your first automated sequence. <strong>Part 2</strong> shows you how to build a sequence for any new treatment in the future, step by step.</span>
+</div>
+
+<main>
+
+  <!-- ===================== PART 1 ===================== -->
+  <div class="part-block">
+    <div class="part-header">
+      <span class="part-number">Part 1</span>
+      <span class="part-title">One-time setup — connecting Jane, building your segments &amp; launching sequences</span>
+    </div>
+
+    <!-- STEP A: Connect Jane to Mailchimp -->
+    <div class="section-label">Section A</div>
+    <h2>Connect Jane App to Mailchimp</h2>
+    <p class="section-desc">Do this once. After setup, any patient who opts into marketing emails in Jane will automatically appear in your Mailchimp audience.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <div class="step-action">Create a free Mailchimp account</div>
+          <div class="step-detail">Go to <code>mailchimp.com</code> and sign up. Use the Elements Medical Spa email address. The free plan supports up to 500 contacts and is enough to start.
+            <div class="tip"><strong>Tip:</strong> Write down your Mailchimp login details and store them somewhere safe — you will need them again.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <div class="step-action">In Jane, go to Settings → Integrations</div>
+          <div class="step-detail">Log into Jane as an admin. In the left sidebar click <code>Settings</code>, then <code>Integrations</code>. Scroll down to find the <strong>Mailchimp</strong> section.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <div class="step-action">Click "Connect" and log into Mailchimp</div>
+          <div class="step-detail">A window will pop up asking you to log into Mailchimp. Enter your Mailchimp email and password. Click <code>Allow</code> when it asks for permission. The window will close and Jane will show Mailchimp as connected.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <div class="step-action">Choose your Mailchimp audience list</div>
+          <div class="step-detail">Jane will ask which Mailchimp audience (mailing list) to sync patients into. If you don't have one yet, Mailchimp creates a default list called "My Audience" — select that. You can rename it later to "Elements Medical Spa Patients."
+            <div class="warn"><strong>Important:</strong> Only patients who ticked "Yes" to marketing emails in Jane will sync. Patients who opted out are never added — this is automatic and you don't need to manage it manually.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <div class="step-action">Confirm the sync worked</div>
+          <div class="step-detail">Log into Mailchimp and go to <code>Audience → All contacts</code>. Within a few minutes your existing opted-in Jane patients should appear there. Going forward, new patients are added automatically each night.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP B: Tag patients in Mailchimp -->
+    <div class="section-label">Section B</div>
+    <h2>Tag patients in Mailchimp after each appointment</h2>
+    <p class="section-desc">Jane syncs patient contact details and marketing opt-in status to Mailchimp — but it does not sync treatment labels. Treatment tags must be added directly in Mailchimp. This is a 30-second step done at the end of every appointment, alongside setting the Jane Return Visit Reminder.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <div class="step-action">Confirm the patient is in your Mailchimp audience first</div>
+          <div class="step-detail">Jane syncs opted-in patients to Mailchimp overnight. If the appointment was today, the patient may not yet appear in Mailchimp until tomorrow morning. If they are a returning patient, they should already be there.
+            <div class="tip"><strong>Tip:</strong> To check — log into Mailchimp → Audience → All contacts → search the patient's name or email. If they appear, proceed. If not, wait until the next morning after their appointment date.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <div class="step-action">Open the patient's contact in Mailchimp</div>
+          <div class="step-detail">In Mailchimp go to <code>Audience → All contacts</code>. Search for the patient by name or email. Click their name to open their contact profile.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <div class="step-action">Add the treatment tag</div>
+          <div class="step-detail">In the contact profile, find the <code>Tags</code> section on the right side. Click <code>Edit tags</code>. Type or select the treatment tag that matches today's appointment. Click <code>Save</code>.
+            <div class="step-sub">
+              <span>Botox → <code>botox</code></span>
+              <span>RF Microneedling → <code>rf-microneedling</code></span>
+              <span>CO₂ Laser → <code>co2-laser</code></span>
+              <span>Rosacea Laser → <code>rosacea-laser</code></span>
+              <span>Laser Genesis → <code>laser-genesis</code></span>
+              <span>Dermal Fillers → <code>dermal-fillers</code></span>
+              <span>Radiesse → <code>radiesse</code></span>
+              <span>Sculptra → <code>sculptra</code></span>
+            </div>
+            <div class="tip"><strong>Tip:</strong> A patient can have multiple tags — if they had Botox and Laser Genesis today, add both. Each tag triggers its own independent email journey.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <div class="step-action">Create the tags in Mailchimp before you need them</div>
+          <div class="step-detail">The first time you use a tag it needs to be created. Do this once now for all eight treatments so they exist and are ready to apply at any future appointment.
+            <div class="step-sub">
+              <span>In Mailchimp → Audience → Tags → Create Tag</span>
+              <span>Create one tag per treatment using the exact names above</span>
+              <span>Use lowercase, dashes, no spaces — spelling must be identical every time</span>
+            </div>
+            <div class="warn"><strong>Important:</strong> Tags are case-sensitive. <code>Botox</code> and <code>botox</code> are treated as two different tags. Always use lowercase.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <div class="step-action">Make tagging part of the daily checkout routine</div>
+          <div class="step-detail">The tagging step in Mailchimp replaces the Jane Labels step described in older versions of this guide. Your end-of-appointment checklist is now:
+            <div class="step-sub">
+              <span>Jane: checkout patient, set Return Visit Reminder</span>
+              <span>Mailchimp: open contact, add treatment tag</span>
+              <span>Mailchimp journey fires automatically once tag is added</span>
+            </div>
+            <div class="note"><strong>New patient same day?</strong> If the patient was seen today for the first time, wait until tomorrow morning for Jane to sync them to Mailchimp, then add the tag. Set a reminder on your phone or add a sticky note at the desk.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP C: Create Segments in Mailchimp -->
+    <div class="section-label">Section C</div>
+    <h2>Create segments in Mailchimp</h2>
+    <p class="section-desc">A segment is a filtered group of contacts based on their tags. You will create one segment per treatment — each segment is used to report on and manage that treatment group. The Customer Journey (automation) is triggered by the tag being added, not by the segment — but segments are useful for seeing who is in each treatment group at a glance.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <div class="step-action">In Mailchimp, go to Audience → Segments</div>
+          <div class="step-detail">Log into Mailchimp. In the left menu click <code>Audience</code>, then <code>Segments</code>. Click the blue <code>Create Segment</code> button in the top right.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <div class="step-action">Set the segment conditions</div>
+          <div class="step-detail">For each treatment, you will create a segment using these settings:
+            <div class="step-sub">
+              <span>Condition type: <code>Tags</code></span>
+              <span>Rule: <code>contains</code></span>
+              <span>Value: the treatment tag name (e.g. <code>botox</code>)</span>
+            </div>
+            Click <code>Preview Segment</code> to confirm the right contacts appear, then click <code>Save</code>. Name the segment clearly, e.g. <strong>Botox Patients</strong>.
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <div class="step-action">Repeat for each treatment</div>
+          <div class="step-detail">Create one segment per treatment using the same process:
+            <div class="step-sub">
+              <span>Botox Patients → tag: <code>botox</code></span>
+              <span>RF Microneedling Patients → tag: <code>rf-microneedling</code></span>
+              <span>CO₂ Laser Patients → tag: <code>co2-laser</code></span>
+              <span>Rosacea Laser Patients → tag: <code>rosacea-laser</code></span>
+              <span>Laser Genesis Patients → tag: <code>laser-genesis</code></span>
+              <span>Dermal Filler Patients → tag: <code>dermal-fillers</code></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP D: Build an Automation -->
+    <div class="section-label">Section D</div>
+    <h2>Build your first automated email sequence</h2>
+    <p class="section-desc">An automation (also called a "Customer Journey" in Mailchimp) is a series of emails that send automatically based on a trigger. You will build one per treatment. Start with Botox as your first practice run.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <div class="step-action">Go to Automations → Customer Journeys</div>
+          <div class="step-detail">In Mailchimp, click <code>Automations</code> in the left menu. Then click <code>Customer Journeys</code>. Click the blue <code>Create Journey</code> button.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <div class="step-action">Name the journey and select your audience</div>
+          <div class="step-detail">Give the journey a clear name like <strong>Botox Rebooking Sequence</strong>. Select your audience (Elements Medical Spa Patients). Click <code>Start Building</code>.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <div class="step-action">Set the starting point (trigger)</div>
+          <div class="step-detail">Mailchimp will ask what starts this journey. Select <code>Tag Added</code> as the trigger type. Then choose the tag <code>botox</code>. This means the sequence starts automatically the moment a staff member adds the Botox tag to that patient's Mailchimp contact profile — which happens at checkout after every Botox appointment.
+            <div class="tip"><strong>How it flows:</strong> Patient has Botox → staff opens Mailchimp contact → adds tag <code>botox</code> → Mailchimp immediately detects the tag and starts the journey. The first email sends after whatever delay you set (e.g. 14 days). No waiting overnight — tagging in Mailchimp is instant.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <div class="step-action">Add a time delay before the first email</div>
+          <div class="step-detail">Click the <code>+</code> button below the trigger. Select <code>Time Delay</code>. Set it to <strong>14 days</strong>. This gives the patient time to heal and enjoy their results before hearing from you.
+            <div class="note"><strong>Why delay?</strong> Sending an email the same day as treatment feels transactional. A 14-day delay feels like genuine follow-up care.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <div class="step-action">Add the first email — the check-in</div>
+          <div class="step-detail">Click <code>+</code> below the delay. Select <code>Send Email</code>. Click <code>Design Email</code>. Use Mailchimp's drag-and-drop editor to write your email. See the sequence tables in Part 2 for the exact subject line and purpose of each email per treatment.
+            <div class="step-sub">
+              <span>Subject line: "How are you feeling after your Botox?" (example)</span>
+              <span>Content: warm check-in, aftercare reminder, invite to message with questions</span>
+              <span>Sign off: from Dr. Rashi Mehta / Elements Medical Spa</span>
+            </div>
+            Click <code>Save &amp; Close</code> when done.
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">6</div>
+        <div class="step-body">
+          <div class="step-action">Add the remaining emails with delays between each</div>
+          <div class="step-detail">After your first email, continue building by alternating: <code>Time Delay</code> → <code>Send Email</code> → <code>Time Delay</code> → <code>Send Email</code>, and so on. The delays and email purposes for each treatment are listed in the sequence tables in Part 2 of this guide.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">7</div>
+        <div class="step-body">
+          <div class="step-action">Turn on the journey</div>
+          <div class="step-detail">Once all emails are built, click the <code>Turn On</code> button in the top right corner of the journey builder. Mailchimp will confirm it is active. From this point forward, any patient tagged with <code>botox</code> in Jane will automatically enter this sequence.
+            <div class="warn"><strong>Before turning on:</strong> Send yourself a test email (there is a "Preview and Test" button inside each email editor) to confirm the email looks correct and reads well on your phone. Also do a live test: add the tag <code>botox</code> to your own Mailchimp contact and confirm the journey starts.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===================== PART 2 ===================== -->
+  <div class="part-block">
+    <div class="part-header">
+      <span class="part-number">Part 2</span>
+      <span class="part-title">Email sequences — current treatments &amp; how to add new ones</span>
+    </div>
+
+    <div class="info-box">
+      <h3>What goes inside each email</h3>
+      <ul>
+        <li>Always open with the patient's first name using Mailchimp's merge tag: <code>*|FNAME|*</code> — Mailchimp replaces this with their actual name automatically.</li>
+        <li>Keep emails short — 3 to 5 sentences is enough. Patients don't read long emails.</li>
+        <li>Every email should have one clear button or link: either "Book Now" linking to your Jane online booking page, or a skincare product link.</li>
+        <li>Always sign off as <strong>Dr. Rashi Mehta &amp; the Elements team</strong>.</li>
+        <li>Dr. Mehta will write or approve the content of each email — your job is to set up the sequence structure in Mailchimp and paste in the content she provides.</li>
+      </ul>
+    </div>
+
+    <!-- BOTOX -->
+    <div class="treatment-block">
+      <div class="section-label">Sequence 1 of 6</div>
+      <h2>Botox</h2>
+      <p class="section-desc">3-email sequence. Trigger tag: <code>botox</code>. Goal: check in at 2 weeks, prompt rebooking at 3 months.</p>
+      <div class="treatment-title-row">
+        <span class="treatment-badge">Botox</span>
+        <span class="treatment-interval">Sequence spans <strong>~105 days</strong> · 3 emails total</span>
+      </div>
+      <div class="sequence-timeline">
+        <div class="seq-header">
+          <span>When it sends</span><span>Purpose</span><span>Suggested subject line</span>
+        </div>
+        <div class="seq-row">
+          <div class="seq-timing">Day 14</div>
+          <div class="seq-purpose">Warm check-in. Ask how they're feeling. Remind about sun protection and avoiding certain products. Reinforce that results look best at 2 weeks.</div>
+          <div class="seq-subject">"How are you feeling after your Botox?"</div>
+        </div>
+        <div class="seq-row">
+          <div class="seq-timing">Day 75</div>
+          <div class="seq-purpose">Rebooking nudge. Let them know their results typically begin to soften around 3 months and it's a great time to book ahead before their schedule fills up.</div>
+          <div class="seq-subject">"Time to top up, [first name]?"</div>
+        </div>
+        <div class="seq-row">
+          <div class="seq-timing">Day 90</div>
+          <div class="seq-purpose">Final reminder. Friendly nudge — results at their peak are behind them now. Mention how staying on schedule keeps results natural-looking.</div>
+          <div class="seq-subject">"Your Botox is ready for a refresh"</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RF MICRONEEDLING -->
+    <div class="treatment-block">
+      <div class="section-label">Sequence 2 of 6</div>
+      <h2>RF Microneedling</h2>
+      <p class="section-desc">4-email sequence covering the 3-session series plus a maintenance reminder. Trigger tag: <code>rf-microneedling</code>.</p>
+      <div class="treatment-title-row">
+        <span class="treatment-badge">RF Microneedling</span>
+        <span class="treatment-interval">Sequence spans <strong>~180 days</strong> · 4 emails total</span>
+      </div>
+      <div class="sequence-timeline">
+        <div class="seq-header">
+          <span>When it sends</span><span>Purpose</span><span>Suggested subject line</span>
+        </div>
+        <div class="seq-row">
+          <div class="seq-timing">Day 7</div>
+          <div class="seq-purpose">Healing check-in. Reassure that redness and texture changes are normal. Remind about skincare protocol (gentle cleanser, SPF). Link to post-care guide on the website.</div>
+          <div class="seq-subject">"Your skin is working hard right now"</div>
+        </div>
+        <div class="seq-row">
+          <div class="seq-timing">Day 35</div>
+          <div class="seq-purpose">Session 2 prompt. Remind them their second session is coming up in about a week. Explain that collagen results build cumulatively — skipping sessions reduces outcomes.</div>
+          <div class="seq-subject">"Ready for session 2 of your RF series?"</div>
+        </div>
+        <div class="seq-row">
+          <div class="seq-timing">Day 77</div>
+          <div class="seq-purpose">Session 3 prompt. Same as session 2 nudge. Note that after 3 sessions, results continue improving for another 3–6 months.</div>
+          <div class="seq-subject">"One more to go — book your final session"</div>
+        </div>
+        <div class="seq-row">
+          <div class="seq-timing">Day 180</div>
+          <div class="seq-purpose">Maintenance check-in. Series is complete. Let them know Dr. Mehta recommends 1–2 maintenance sessions per year to maintain collagen results. Invite them to book a check-in consult.</div>
+          <div class="seq-subject">"6 months on — how is your skin looking?"</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CO2 LASER -->
+    <div class="treatment-block">
+      <div class="section-label">Sequence 3 of 6</div>
+      <h2>CO₂ Laser Resurfacing</h2>
+      <p class="section-desc">4-email sequence with a longer timeline — the annual treatment cycle plus a 3-month skincare touchpoint. Trigger tag: <code>co2-laser</code>.</p>
+      <div class="treatment-title-row">
+        <span class="treatment-badge">CO₂ Laser</span>
+        <span class="treatment-interval">Sequence spans <strong>~365 days</strong> · 4 emails total</span>
+      </div>
+      <div class="sequence-timeline">
+        <div class="seq-header">
+          <span>When it sends</span><span>Purpose</span><span>Suggested subject line</span>
+        </div>
+        <div class="seq-row">
+          <div class="seq-timing">Day 3</div>
+          <div class="seq-purpose">Healing support email. What to expect in the first week — redness, peeling, swelling. Link to the CO₂ aftercare page on the Elements website. Reassure that this is all normal.</div>
+          <div class="seq-subject">"What to expect this week after your CO₂ laser"</div>
+        </div>
+        <div class="seq-row">
+          <div class="seq-timing">Day 14</div>
+          <div class="seq-purpose">Skin is settling. Celebrate the progress. Recommend transitioning to active ingredients (AlumierMD or SkinCeuticals products) now that the barrier is restored. Include product links.</div>
+          <div class="seq-subject">"Two weeks post-laser — time to nourish"</div>
+        </div>
+        <div class="seq-row">
+          <div class="seq-timing">Day 80</div>
+          <div class="seq-purpose">3-month skincare review invite. Collagen remodelling is peaking. Invite them for a quick check-in with Dr. Mehta to assess results and refine their skincare regime.</div>
+          <div class="seq-subject">"Your skin at 3 months — let's check in"</div>
+        </div>
+        <div class="seq-row">
+          <div class="seq-timing">Day 330</div>
+          <div class="seq-purpose">Annual rebooking. Results from CO₂ can last 1–2 years but a yearly treatment maintains and deepens results. Invite them to book their next session before the slot fills.</div>
+          <div class="seq-subject">"Time to resurface again, [first name]"</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROSACEA LASER -->
+    <div class="treatment-block">
+      <div class="section-label">Sequence 4 of 6</div>
+      <h2>Rosacea Laser</h2>
+      <p class="section-desc">3-email sequence on a shorter cycle. Trigger tag: <code>rosacea-laser</code>. Interval may vary by patient — the sequence uses default 60-day timing.</p>
+      <div class="treatment-title-row">
+        <span class="treatment-badge">Rosacea Laser</span>
+        <span class="treatment-interval">Sequence spans <strong>~60 days</strong> · 3 emails total</span>
+      </div>
+      <div class="sequence-timeline">
+        <div class="seq-header">
+          <span>When it sends</span><span>Purpose</span><span>Suggested subject line</span>
+        </div>
+        <div class="seq-row">
+          <div class="seq-timing">Day 5</div>
+          <div class="seq-purpose">Post-treatment support. What to expect — mild flushing, sensitivity. Remind about SPF, avoiding heat, and gentle skincare for the next week. Reassurance tone.</div>
+          <div class="seq-subject">"After your rosacea treatment — what's normal"</div>
+        </div>
+        <div class="seq-row">
+          <div class="seq-timing">Day 45</div>
+          <div class="seq-purpose">Rebooking nudge. Let them know consistent sessions are key to keeping rosacea under control. Time to book their next session with Dr. Mehta.</div>
+          <div class="seq-subject">"Staying ahead of rosacea — book your next session"</div>
+        </div>
+        <div class="seq-row">
+          <div class="seq-timing">Day 60</div>
+          <div class="seq-purpose">Final reminder. Light, friendly tone. Mention that results are best maintained with regular intervals — if they have questions about timing, they can message the clinic.</div>
+          <div class="seq-subject">"Don't let the redness creep back, [first name]"</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LASER GENESIS -->
+    <div class="treatment-block">
+      <div class="section-label">Sequence 5 of 6</div>
+      <h2>Laser Genesis</h2>
+      <p class="section-desc">5-email sequence covering a 4–6 session monthly series plus ongoing maintenance. Trigger tag: <code>laser-genesis</code>.</p>
+      <div class="treatment-title-row">
+        <span class="treatment-badge">Laser Genesis</span>
+        <span class="treatment-interval">Sequence spans <strong>~210 days</strong> · 5 emails total</span>
+      </div>
+      <div class="sequence-timeline">
+        <div class="seq-header">
+          <span>When it sends</span><span>Purpose</span><span>Suggested subject line</span>
+        </div>
+        <div class="seq-row">
+          <div class="seq-timing">Day 3</div>
+          <div class="seq-purpose">Post-treatment note. No real downtime with Laser Genesis — this email is brief. Remind about SPF and that results build gradually over the series. Sets the right expectations.</div>
+          <div class="seq-subject">"After your first Laser Genesis — what's happening under the surface"</div>
+        </div>
+        <div class="seq-row">
+          <div class="seq-timing">Day 21</div>
+          <div class="seq-purpose">Session 2 prompt. Explain that each session builds on the last — collagen stimulation compounds over time. Encourage them to book session 2 this week.</div>
+          <div class="seq-subject">"Ready for session 2? Your skin is warming up"</div>
+        </div>
+        <div class="seq-row">
+          <div class="seq-timing">Day 51</div>
+          <div class="seq-purpose">Session 3 prompt. By now they should be noticing improved texture and glow. Validate that and remind session 3 is coming up.</div>
+          <div class="seq-subject">"Halfway through — can you see the difference?"</div>
+        </div>
+        <div class="seq-row">
+          <div class="seq-timing">Day 81</div>
+          <div class="seq-purpose">Session 4 (final for 4-session patients, or third of six). Note cumulative results. If they are on a 4-session plan, let them know their series is nearly complete.</div>
+          <div class="seq-subject">"Almost there — book your next Laser Genesis"</div>
+        </div>
+        <div class="seq-row">
+          <div class="seq-timing">Day 180</div>
+          <div class="seq-purpose">Maintenance invite. Series complete. Recommend 1–2 sessions per year to sustain results. Invite them back for a glow maintenance session.</div>
+          <div class="seq-subject">"Keep the glow going, [first name]"</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DERMAL FILLERS -->
+    <div class="treatment-block">
+      <div class="section-label">Sequence 6 of 6</div>
+      <h2>Dermal Fillers</h2>
+      <p class="section-desc">3-email sequence on a 9-month cycle (HA fillers). Trigger tag: <code>dermal-fillers</code>. Radiesse patients may need a longer delay — adjust manually if Dr. Mehta specifies.</p>
+      <div class="treatment-title-row">
+        <span class="treatment-badge">Dermal Fillers</span>
+        <span class="treatment-interval">Sequence spans <strong>~270 days</strong> · 3 emails total</span>
+      </div>
+      <div class="sequence-timeline">
+        <div class="seq-header">
+          <span>When it sends</span><span>Purpose</span><span>Suggested subject line</span>
+        </div>
+        <div class="seq-row">
+          <div class="seq-timing">Day 14</div>
+          <div class="seq-purpose">2-week check-in. Swelling is fully resolved by now. Let them know their final results are visible. Invite them to reach out if they have any concerns. Celebrate their results.</div>
+          <div class="seq-subject">"Two weeks post-filler — this is your result"</div>
+        </div>
+        <div class="seq-row">
+          <div class="seq-timing">Day 240</div>
+          <div class="seq-purpose">Rebooking nudge. HA fillers typically begin softening around 9 months. Book ahead to maintain volume and avoid starting from scratch with a larger correction.</div>
+          <div class="seq-subject">"Your filler is approaching its refresh window"</div>
+        </div>
+        <div class="seq-row">
+          <div class="seq-timing">Day 270</div>
+          <div class="seq-purpose">Final reminder. Warm, gentle tone. Results at their best are behind them now — time to rebook before significant volume loss occurs.</div>
+          <div class="seq-subject">"Time to refresh your fillers, [first name]"</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===================== PART 3 ===================== -->
+  <div class="part-block">
+    <div class="part-header">
+      <span class="part-number">Part 3</span>
+      <span class="part-title">Adding a new treatment sequence in the future — the template</span>
+    </div>
+
+    <p class="section-desc" style="margin-bottom: 28px;">Any time Elements adds a new treatment, follow these steps to build its Mailchimp sequence. You do not need technical skills — just follow the same process from Part 1, Section D, using the template below.</p>
+
+    <!-- FRAMEWORK -->
+    <div class="section-label">Step 1 — Fill in this planning template first</div>
+    <h2>New treatment planning template</h2>
+    <p class="section-desc">Before touching Mailchimp, answer these questions with Dr. Mehta. Print this page and fill it in by hand, or ask Dr. Mehta to fill it out. Then hand it to whoever sets up Mailchimp.</p>
+
+    <div class="template-box">
+      <div class="template-box-header">New treatment sequence — planning sheet</div>
+      <div class="template-row">
+        <div class="template-label">Treatment name</div>
+        <div class="template-value"><em>e.g. Sculptra, Lip Flip, Skin Booster</em></div>
+      </div>
+      <div class="template-row">
+        <div class="template-label">Mailchimp tag name</div>
+        <div class="template-value"><em>Use lowercase with dashes, e.g. <code>skin-booster</code>. Create this tag in Mailchimp → Audience → Tags before building the sequence. Tags are added manually to patient contacts in Mailchimp at checkout — they do not sync from Jane.</em></div>
+      </div>
+      <div class="template-row">
+        <div class="template-label">Is this a series?</div>
+        <div class="template-value"><em>Yes / No. If yes, how many sessions and how many weeks apart?</em></div>
+      </div>
+      <div class="template-row">
+        <div class="template-label">Rebooking interval</div>
+        <div class="template-value"><em>How many months until the patient should return? e.g. 6 months, 12 months</em></div>
+      </div>
+      <div class="template-row">
+        <div class="template-label">Email 1 — when &amp; purpose</div>
+        <div class="template-value"><em>When does the first email send? What does it say? e.g. Day 7 — healing check-in and aftercare reminder</em></div>
+      </div>
+      <div class="template-row">
+        <div class="template-label">Email 2 — when &amp; purpose</div>
+        <div class="template-value"><em>e.g. Day 45 — rebooking nudge, mention results softening</em></div>
+      </div>
+      <div class="template-row">
+        <div class="template-label">Email 3 — when &amp; purpose</div>
+        <div class="template-value"><em>e.g. Day 60 — final reminder before significant lapse</em></div>
+      </div>
+      <div class="template-row">
+        <div class="template-label">Skincare products to mention</div>
+        <div class="template-value"><em>Which AlumierMD / SkinCeuticals / Alastin / skinbetter products should be referenced in emails for this treatment?</em></div>
+      </div>
+      <div class="template-row">
+        <div class="template-label">Who writes the email content?</div>
+        <div class="template-value"><em>Dr. Mehta writes / approves the text. Admin staff sets up the Mailchimp sequence structure and pastes in the content.</em></div>
+      </div>
+    </div>
+
+    <!-- MAILCHIMP CHECKLIST -->
+    <div class="section-label">Step 2 — Mailchimp setup checklist for any new treatment</div>
+    <h2>New sequence checklist</h2>
+    <p class="section-desc">Once the planning template above is filled in, follow this checklist in order.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <div class="step-action">Create the tag in Mailchimp first</div>
+          <div class="step-detail">In Mailchimp go to <code>Audience → Tags → Create Tag</code>. Name it exactly as written on the planning template — lowercase, dashes, no spaces. This tag is what you will add to a patient's Mailchimp contact at checkout after each treatment appointment.
+            <div class="tip">Do this before building the Customer Journey — Mailchimp can only use tags that already exist when setting up the trigger.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <div class="step-action">Create a new segment in Mailchimp</div>
+          <div class="step-detail">Go to <code>Audience → Segments → Create Segment</code>. Set condition: Tag contains [new tag name]. Save as "[Treatment Name] Patients". This lets you see all patients in this treatment group at a glance.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <div class="step-action">Create a new Customer Journey in Mailchimp</div>
+          <div class="step-detail">Go to <code>Automations → Customer Journeys → Create Journey</code>. Name it "[Treatment Name] Rebooking Sequence". Select the Elements audience.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <div class="step-action">Set the trigger to "Tag Added" → [new tag]</div>
+          <div class="step-detail">This ensures the sequence starts automatically the moment a staff member adds that tag to a patient's Mailchimp contact profile at checkout. The trigger fires instantly — no sync delay.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <div class="step-action">Build the email sequence using the planning template</div>
+          <div class="step-detail">For each email on the template: add a Time Delay (set to the number of days from the template), then add a Send Email step. Paste in the email content approved by Dr. Mehta. Use <code>*|FNAME|*</code> wherever the patient's first name should appear.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">6</div>
+        <div class="step-body">
+          <div class="step-action">Send test emails to yourself</div>
+          <div class="step-detail">Inside each email in the journey, click <code>Preview and Test → Send a Test Email</code>. Enter your own email address. Check that it looks correct on your phone before turning anything on.</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">7</div>
+        <div class="step-body">
+          <div class="step-action">Turn on the journey and brief your team</div>
+          <div class="step-detail">Click <code>Turn On</code>. The sequence is now live. Add this treatment to the quick reference table in the Jane guide and update the checkout checklist.
+            <div class="tip"><strong>Last step:</strong> Tell the front desk team the new tag name and show them where to add it in Mailchimp at checkout. Without this step, no patients will enter the sequence.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUICK REFERENCE -->
+    <div class="section-label" style="margin-top: 36px;">Quick reference</div>
+    <h2>All sequences at a glance</h2>
+    <p class="section-desc">Use this table to check the status of each active sequence or find settings quickly when editing.</p>
+
+    <div class="overview">
+      <div class="overview-header">Active Mailchimp sequences — Elements Medical Spa</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Treatment</th>
+            <th>Jane tag</th>
+            <th>Emails</th>
+            <th>Key send days</th>
+            <th>Total span</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Botox</td>
+            <td><code>botox</code></td>
+            <td>3</td>
+            <td>Day 14 · 75 · 90</td>
+            <td>~105 days</td>
+          </tr>
+          <tr>
+            <td>RF Microneedling</td>
+            <td><code>rf-microneedling</code></td>
+            <td>4</td>
+            <td>Day 7 · 35 · 77 · 180</td>
+            <td>~180 days</td>
+          </tr>
+          <tr>
+            <td>CO₂ Laser</td>
+            <td><code>co2-laser</code></td>
+            <td>4</td>
+            <td>Day 3 · 14 · 80 · 330</td>
+            <td>~365 days</td>
+          </tr>
+          <tr>
+            <td>Rosacea Laser</td>
+            <td><code>rosacea-laser</code></td>
+            <td>3</td>
+            <td>Day 5 · 45 · 60</td>
+            <td>~60 days</td>
+          </tr>
+          <tr>
+            <td>Laser Genesis</td>
+            <td><code>laser-genesis</code></td>
+            <td>5</td>
+            <td>Day 3 · 21 · 51 · 81 · 180</td>
+            <td>~210 days</td>
+          </tr>
+          <tr>
+            <td>Dermal Fillers</td>
+            <td><code>dermal-fillers</code></td>
+            <td>3</td>
+            <td>Day 14 · 240 · 270</td>
+            <td>~270 days</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</main>
+
+<footer>
+  <strong>Elements Medical Spa</strong> · Internal staff guide · Not for distribution · Dr. Rashi Mehta, MD
+</footer>
+
+</body>
+</html>
